@@ -28,7 +28,7 @@ export default function BestSelling() {
     }, []);
 
     return (
-        <section className="w-full bg-[#f5f5f5] px-4 py-8 md:px-8 lg:px-12">
+        <section className="w-full bg-white px-4 py-8 md:px-8 lg:px-12">
             <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-[280px_minmax(0,1fr)]">
                 <div className="flex flex-col justify-center">
                     <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#ff668b]">
