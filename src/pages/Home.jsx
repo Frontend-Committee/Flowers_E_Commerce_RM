@@ -3,6 +3,7 @@ import BestSelling from "../components/homePageComponents/BestSelling";
 import PromotionCardsSection from "../components/homePageComponents/PromotionCardsSection";
 import PromotionHeroSection from "../components/homePageComponents/PromotionHeroSection";
 import MostPopular from "../components/homePageComponents/MostPopular";
+import About from "../components/homePageComponents/About";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <PromotionCardsSection />
       <BestSelling />
       <MostPopular />
+      <About />
     </>
   );
 }

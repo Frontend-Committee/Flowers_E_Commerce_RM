@@ -152,7 +152,7 @@ export default function MostPopular() {
   console.log("Most Popular Products:", products);
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-10">
+    <section className="w-full bg-white px-4 py-8 md:px-8 lg:px-12">
       {/* Header */}
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <h2
