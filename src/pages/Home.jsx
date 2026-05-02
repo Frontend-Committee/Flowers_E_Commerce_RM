@@ -6,6 +6,7 @@ import GallerySection from "../components/homePageComponents/GallerySection";
 
 import MostPopular from "../components/homePageComponents/MostPopular";
 import About from "../components/homePageComponents/About";
+import TestimonialsSection from "../components/homePageComponents/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <MostPopular />
       <About />
       <GallerySection />
+      <TestimonialsSection />
     </>
   );
 }
