@@ -3,11 +3,23 @@ export default function Gallery() {
     <section className="mx-auto max-w-7xl px-4 py-14">
       {/* Header */}
       <div className="mb-8 text-center">
-        <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-[#741c21]">
+        <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-[#FF668B]">
           Gallery
         </p>
-        <h2 className="text-2xl font-bold text-gray-900">
-          <span className="underline decoration-[#741c21] decoration-2 underline-offset-4">
+        <h2 className="text-2xl font-bold text-[#741C21] p-0">
+          <span
+            className="relative underline decoration-[#E65073] decoration-2 underline-offset-4 
+                         before:content-[''] 
+               before:absolute 
+               before:left-0 
+               before:top-6 
+               before:-translate-y-1/2 
+               before:h-3 
+               before:w-70 
+               before:rounded-full
+               before:bg-[#FFE0E7]
+               before:-z-10"
+          >
             Check Out
           </span>{" "}
           our Wonderful Gallery
