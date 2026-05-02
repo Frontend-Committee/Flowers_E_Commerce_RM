@@ -7,6 +7,7 @@ import GallerySection from "../components/homePageComponents/GallerySection";
 import MostPopular from "../components/homePageComponents/MostPopular";
 import About from "../components/homePageComponents/About";
 import TestimonialsSection from "../components/homePageComponents/TestimonialsSection";
+import TrustedSection from "../components/homePageComponents/TrustedSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <About />
       <GallerySection />
       <TestimonialsSection />
+      <TrustedSection />
     </>
   );
 }

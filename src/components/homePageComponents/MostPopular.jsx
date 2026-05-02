@@ -67,7 +67,10 @@ function ProductCard({ product }) {
               src={
                 product.imgCover ===
                 "https://flower.elevateegy.com/uploads/default-product.png"
-                  ? `https://loremflickr.com/640/480/flower,bouquet?lock=${product._id}`
+                  ? 
+                  'src/assets/defaultFlower.png'
+                //   `https://source.unsplash.com/featured/?flowers`
+                //   `https://loremflickr.com/640/480/flower,bouquet?lock=${product._id}`
                   : //   `https://loremflickr.com/640/480/flower,bouquet?lock=${product._id}`
                     product.imgCover
               }
@@ -169,7 +172,7 @@ export default function MostPopular() {
                before:-z-10"
         >
           Most Popular
-        </h2>
+        </h2>   
         <div className="flex flex-wrap gap-3">
           {tabs.map((tab) => (
             <button
