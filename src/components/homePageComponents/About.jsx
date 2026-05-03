@@ -10,33 +10,51 @@ const features = [
 export default function AboutSection() {
   return (
     <section className="w-full bg-white px-4 py-8 md:px-8 lg:px-12">
-      <div className="flex flex-col items-center gap-20 lg:flex-row">
+      <div className="flex flex-col lg:flex-row items-stretch gap-12 ">
         {/* Left — Image collage */}
-        <div className="grid grid-cols-[2fr_1fr] gap-3 w-full lg:w-1/3 h-[300px] md:h-[400px]">
+        <div className="flex gap-6 lg:w-[33%] h-[20rem] shrink-0">
           {/* Col 1: tall image fills full height */}
-          <img
-            src="src/assets/purpleGift.png"
-            className="h-full w-full object-cover rounded-tl-[30px] rounded-bl-[75px] rounded-r-[75px]"
-            alt="Gift collage"
-          />
+          <div
+            className="relative inline-block z-10
+            before:content-[''] 
+            before:absolute 
+            before:w-[100%] before:h-[100%] before:bottom-3
+            before:-left-5
+            before:border-4
+            before:rotate-5
+            before:w-[100%]
+            before:origin-center before:border-[#A6252A] before:-z-10  before:rounded-tl-[40px] before:rounded-bl-[85px] before:rounded-r-[85px] w-[60%] object-cover rounded-tl-[40px] rounded-bl-[85px] rounded-r-[85px]"
+          >
+            <img
+              src="src/assets/purpleGift.png"
+              // className="w-[100%] h-[100%] object-cover rounded-tl-[30px] rounded-bl-[75px] rounded-r-[75px]"
+              className=" h-[100%] w-[100%] object-cover rounded-tl-[30px] rounded-bl-[75px] rounded-r-[75px]"
+              alt="Gift collage"
+            />
+          </div>
 
           {/* Col 2: flex column so both images share the height equally, min-h-0 prevents overflow */}
-          <div className="flex flex-col gap-3 h-full min-h-0">
+          <div className="flex flex-col gap-3 w-[40%]">
+            {/* <div> */}
+
             <img
               src="src/assets/orangeGift.png"
-              className="flex-1 w-full object-cover rounded-full min-h-0"
+              className="aspect-square flex-1 w-full object-cover rounded-full min-h-0"
               alt="Gift collage"
             />
+            {/* </div> */}
+            {/* <div> */}
             <img
               src="src/assets/blueGift.png"
-              className="flex-1 w-full object-cover rounded-l-[55px] rounded-r-[100px] min-h-0"
+              className="flex-1 w-full object-cover rounded-l-[55px] rounded-r-[100px]"
               alt="Gift collage"
             />
+            {/* </div> */}
           </div>
         </div>
 
         {/* Right — Text */}
-        <div className="flex-1 h-full">
+        <div className="flex-1">
           <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-[#FF668B]">
             About
           </p>

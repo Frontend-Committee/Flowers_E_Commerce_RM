@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Heart, ShoppingCart, Star } from "lucide-react";
+import { Heart, ShoppingCart, Star, Eye } from "lucide-react";
 import { getMostPopularByOccasion } from "../../api/homeFunctions";
 
 const tabs = ["Wedding", "Anniversary", "Birthday", "Engagement"];
@@ -46,8 +46,8 @@ function ProductCard({ product }) {
 
   return (
     <div className="w-full max-w-full overflow-hidden rounded-2xl">
-      <div className="group w-full">
-        <div className="relative overflow-hidden rounded-2xl bg-[#e8ddd3]">
+      <div className="relative group w-full">
+        <div className="relative overflow-hidden rounded-2xl bg-[#e8ddd3] ">
           <div className="absolute left-3 top-3 z-10 flex flex-wrap gap-2">
             {product.discount > 0 && (
               <span className="rounded-full bg-white/90 px-2 py-1 text-[10px] font-semibold text-gray-600">
@@ -67,16 +67,32 @@ function ProductCard({ product }) {
               src={
                 product.imgCover ===
                 "https://flower.elevateegy.com/uploads/default-product.png"
-                  ? 
-                  'src/assets/defaultFlower.png'
-                //   `https://source.unsplash.com/featured/?flowers`
-                //   `https://loremflickr.com/640/480/flower,bouquet?lock=${product._id}`
-                  : //   `https://loremflickr.com/640/480/flower,bouquet?lock=${product._id}`
+                  ? "src/assets/defaultFlower.png"
+                  : //   `https://source.unsplash.com/featured/?flowers`
+                    //   `https://loremflickr.com/640/480/flower,bouquet?lock=${product._id}`
+                    //   `https://loremflickr.com/640/480/flower,bouquet?lock=${product._id}`
                     product.imgCover
               }
               alt={product.title}
               className="h-56 w-full object-cover transition duration-300 group-hover:scale-105 sm:h-64 md:h-72"
             />
+          </div>
+          <div className="absolute inset-0 bg-[#e07a8a]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-20">
+            <button
+              // onClick={() => setWishlisted((p) => !p)}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md "
+            >
+              <Heart
+                size={20}
+                className="text-[#741c21] transition hover:text-[#E65073]"
+              />
+            </button>
+            <button className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md">
+              <Eye
+                size={20}
+                className="text-[#741c21]  hover:text-[#E65073] transition-colors"
+              />
+            </button>
           </div>
         </div>
 
@@ -172,7 +188,7 @@ export default function MostPopular() {
                before:-z-10"
         >
           Most Popular
-        </h2>   
+        </h2>
         <div className="flex flex-wrap gap-3">
           {tabs.map((tab) => (
             <button
@@ -180,7 +196,7 @@ export default function MostPopular() {
               onClick={() => setActiveTab(tab)}
               className={`text-sm transition ${
                 activeTab === tab
-                  ? "font-semibold text-[#741c21] underline underline-offset-4 decoration-2"
+                  ? "font-semibold text-[#741c21] transition-duration-500"
                   : "text-gray-500 hover:text-gray-800"
               }`}
             >
